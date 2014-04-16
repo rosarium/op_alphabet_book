@@ -1,0 +1,116 @@
+\documentclass[a4paper]{extbook}
+\usepackage[russian]{babel} 
+\usepackage[utf8]{inputenc} 
+\usepackage[T2A]{fontenc} 
+\usepackage{cslav,color,pscyr,geometry,psfrag,graphicx,xcolor,epigraph,ifthen} 
+\showboxdepth=\maxdimen
+\showboxbreadth=\maxdimen
+
+\usepackage[
+contents={},
+opacity=1,
+scale=1.5,
+color=black
+]{background}
+
+\AddEverypageHook{%
+{\ifthenelse{\thepage=1}{\backgroundsetup{contents={}}}%
+{\ifthenelse{\isodd{\value{page}}}%
+{\backgroundsetup{
+angle=0,
+position={10.4cm,-8.122cm},
+contents={\rule{2.2pt}{14cm}}
+}%
+}%
+{\backgroundsetup{
+angle=0,
+position={0.225cm,-8.122cm},%
+contents={\rule{1.9pt}{14cm}}
+}%
+}%
+\BgMaterial}}}
+
+
+\graphicspath{{illustrations/}}
+\makeatletter
+\renewcommand{\@evenhead}{\vbox {\vspace*{-1.2cm}\hbox to \textwidth%
+    {\hfil \Large Оргия Праведников \hfil\strut} \vspace*{-1.4cm}\hbox to 0pt%
+{\hspace*{-2.2cm}\includegraphics[width=3cm]{./borders/even.eps}}%
+{\vspace*{-1.615cm}\hspace*{0.6cm}\rule{17cm}{2.3pt}} 
+}}
+\renewcommand{\@oddhead}{\vbox {\vspace*{-1.2cm}\hbox to \textwidth%
+    {\hfil \Large Оргия Праведников \hfil\strut} \vspace*{-1.4cm}\hbox to 0pt%
+{\hspace*{14.2cm}\includegraphics[width=3cm]{./borders/odd.eps}}%
+{\vspace*{-1.615cm}\hspace*{-2.6cm}\rule{17cm}{2.3pt}} 
+}}
+\renewcommand{\@evenfoot}{\vbox { \vspace*{0.7cm}\hbox to 0pt%
+{\hspace*{-2.2cm}\includegraphics[width=3cm]{./borders/evenfoot.eps}}%
+{\vspace*{-2.32cm}\hspace*{0.6cm}\rule{17cm}{2.3pt}} \hbox to \textwidth%
+{\hfil \fontfamily{agrr}\selectfont{\LARGE -- {\thepage}    -- } \hfil}
+}}
+\renewcommand{\@oddfoot}{\vbox { \vspace*{0.7cm}\hbox to 0pt%
+{\hspace*{14.2cm}\includegraphics[width=3cm]{./borders/oddfoot.eps}}%
+{\vspace*{-2.32cm}\hspace*{-2.6cm}\rule{17cm}{2.3pt}} \hbox to \textwidth%
+{\hfil \fontfamily{agrr}\selectfont{\LARGE -- {\thepage}    -- } \hfil}
+}}
+\makeatother
+
+\newcommand{\dropcamred}[1] {
+  {\csl\center\fontfamily{bukv}\fontshape{indycton}\selectfont\cslfsize{200}{}\color{red}#1}}  
+  \newcommand{\dropcamredsmall}[1] {
+  {\csl\center\fontfamily{bukv}\fontshape{indycton}\selectfont\cslfsize{100}{}\color{red}#1}}  
+\newcommand{\dropcamblue}[1] {
+  {\csl\center\fontfamily{bukv}\fontshape{indycton}\selectfont\cslfsize{200}{}\color{blue}#1}}  
+  
+\newcommand{\firstcam}[2] {
+\begin{center} \fontfamily{fac}\selectfont{{ \Huge\color{red}#1}{\LARGE#2}}\end{center}\normalfont
+}
+  
+\newcommand{\midcam}[3] {
+\begin{center} \fontfamily{fac}\selectfont{{\LARGE#1}{\Huge\color{red}#2}{\LARGE#3}}\end{center}\normalfont
+}
+ 
+\newcommand{\atendcam}[2] {
+\begin{center} \fontfamily{fac}\selectfont{{ \LARGE#1}{\Huge\color{red}#2}}\end{center}\normalfont
+}
+
+\begin{document}
+\begin{titlepage}
+Это просто титульный лист. 
+Тут можно что-то написать, всякие там штуки, типа названия, благодарностей, матерных частушек, нарисовать бобра и всё такое, но сейчас он нужен, чтобы не возникало путаницы между четными и нечетными страницами(обычно четные находятся слева, а нечетные справа)
+\end{titlepage}
+
+\begin{figure}
+\begin{center}
+\def\svgwidth{15cm}
+  \input{./illustrations/a.eps_tex}
+\end{center}
+\end{figure}
+\firstcam{А}{лексей Бурков}
+
+\epigraph{Настоящая музыка пишется, когда ты на ощупь идешь в неизведанное.}{Алексей Бурков}
+
+ \input{./text/a.tex}
+
+
+\begin{figure}[h]
+\begin{center}
+\def\svgwidth{15cm}
+  \input{./illustrations/a.eps_tex}
+\end{center}
+\end{figure}
+\firstcam{А}{лексей Николаевич Бурков}
+\epigraph{Настоящая музыка пишется, когда ты на ощупь идешь в неизведанное.}{Алексей Бурков}
+
+ \input{./text/a.tex}
+
+\begin{figure}[h]
+\begin{center}
+\def\svgwidth{15cm}
+  \input{./illustrations/yo.eps_tex}
+\end{center}
+\end{figure}
+\midcam{Од}{Ё}{жа}
+\epigraph{Я еле-еле поднимаюсь, в темноте ищу штаны \\ Отбросив кресло, понимаю, что штаны не так важны}{Сергей Калугин}
+ \input{./text/yo.tex}
+\end{document}
