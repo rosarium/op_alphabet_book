@@ -31,6 +31,7 @@ contents={\rule{1.9pt}{14cm}}
 }%
 \BgMaterial}}}
 
+\renewcommand{\rmdefault}{fac}
 
 \graphicspath{{illustrations/}}
 \makeatletter
@@ -76,21 +77,26 @@ contents={\rule{1.9pt}{14cm}}
 \begin{center} \fontfamily{fac}\selectfont{{ \LARGE#1}{\Huge\color{red}#2}}\end{center}\normalfont
 }
 \setlength{\epigraphwidth}{0.52\textwidth}
+
+
 \begin{document}
 \begin{titlepage}
+
 Это просто титульный лист. 
 Тут можно что-то написать, всякие там штуки, типа названия, благодарностей, матерных частушек, нарисовать бобра и всё такое, но сейчас он нужен, чтобы не возникало путаницы между четными и нечетными страницами(обычно четные находятся слева, а нечетные справа)
 \end{titlepage}
+\newpage
 \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{a.eps}}
 \end{figure}
-\pagecolor{SeaGreen}
+
 \firstcam{А}{лексей Николаевич Бурков}
 
 \epigraph{Настоящая музыка пишется, когда ты на ощупь идешь в неизведанное.}{Алексей Бурков}
 
  \input{./text/a.tex}
 
+\newpage
 
 \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{yo.eps}}
@@ -98,7 +104,7 @@ contents={\rule{1.9pt}{14cm}}
 \midcam{Од}{Ё}{жа}
 \epigraph{Я еле-еле поднимаюсь, в темноте ищу штаны \\ Отбросив кресло, понимаю, что штаны не так важны}{Сергей Калугин}
  \input{./text/yo.tex}
- 
+ \newpage
  \begin{figure}[h]
 \center{\includegraphics[width=1\linewidth]{p.eps}}
 \end{figure}
